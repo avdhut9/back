@@ -1,5 +1,5 @@
 require("dotenv").config()
-const PORT=process.env.PORT||8080
+const PORT=process.env.PORT
 const express=require("express")
 
 const cors=require("cors")
@@ -10,16 +10,14 @@ const app=express()
 
 app.use(cors())
 app.use(express.json())
-
 app.use("/users",userrouter)
-app.get("/", async (req, res) => {
-    res.send("welcome")
-})
+
 
 
 
 app.listen(PORT,async()=>{
 
 let x=await connect()
+
 console.log(`http://localhost:${PORT}`)
 })
