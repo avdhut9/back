@@ -3,8 +3,8 @@ const PORT=process.env.PORT||8080
 const express=require("express")
 
 const cors=require("cors")
-const connect=require("./config/connection.js")
-const userrouter=require("./users/users.route.js")
+const connect=require("./src/config/connection.js")
+const userrouter=require("./src/users/users.route.js")
 const app=express()
 
 
