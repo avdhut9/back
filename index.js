@@ -11,7 +11,9 @@ const app=express()
 app.use(cors())
 app.use(express.json())
 app.use("/users",userrouter)
-
+app.get("/",(req,res)=>{
+res.send("welcome")
+})
 
 
 
